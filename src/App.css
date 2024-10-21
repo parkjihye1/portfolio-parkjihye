@@ -1,0 +1,7 @@
+/* App 전체 배경색 */
+body, html {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;             
+}
