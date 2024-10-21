@@ -37,7 +37,7 @@ function Projects() {
           
           image: null,
           skill: ['React', 'JavaScript', 'Styled-components', 'Axios', 'React Router', 'Chart.js', 'Git/GitHub', 'Responsive Web Design'], 
-          logo: LimitLogo
+          logo: LimitLogo     
         }, {
           title: 'TRAKPACK',
           header: '[개인프로젝트] Front-end',
