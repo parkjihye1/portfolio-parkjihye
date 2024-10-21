@@ -33,7 +33,7 @@ function Projects() {
           header: '[팀프로젝트] Front-end',
           description: '[LIMIT] 한정판 중고 제품을 안전하게 거래하는 플랫폼',
           github: 'https://github.com/TEAM-SPACE-1/limit-client',
-          site: 'http://lim-it.one',
+          site: 'https://limit-front.vercel.app/',
           
           image: null,
           skill: ['React', 'JavaScript', 'Styled-components', 'Axios', 'React Router', 'Chart.js', 'Git/GitHub', 'Responsive Web Design'], 

@@ -107,15 +107,23 @@ const FlexContainer = styled.div`
 
 const Section = styled.div`
   width: 48%; /* 두 개씩 나란히 배치 */
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  height: 140px;
 
+  @media (max-width: 720px) {
+    width: 100%; /* 모바일 화면에서는 한 줄로 */
+    height: 130px;
+  }
+  
   @media (max-width: 600px) {
     width: 100%; /* 모바일 화면에서는 한 줄로 */
+    height: 120px;
   }
 `;
 
 const ClickableBox = styled.div`
-  padding: 10px;
+
+  padding: 30px;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;

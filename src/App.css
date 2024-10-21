@@ -1,7 +1,13 @@
-/* App 전체 배경색 */
+@font-face {
+  font-family: "GowunDodum-Regular";
+  font-weight: normal;
+  src: url("./fonts/AppleSDGothicNeoM.ttf") format("truetype");
+}
+
 body, html {
   background-color: white;
   margin: 0;
   padding: 0;
-  height: 100%;             
+  height: 100%;          
+  font-family: "AppleSDGothicNeoM";   
 }
