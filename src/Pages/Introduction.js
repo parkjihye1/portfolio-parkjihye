@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FaGithub, FaBloggerB} from 'react-icons/fa';
-import { FiFigma } from 'react-icons/fi';
-import { SiNotion } from 'react-icons/si';
 import { TfiClose } from "react-icons/tfi"
 import { RiAsterisk } from "react-icons/ri";
 import Profile from '../Images/profile.png';
@@ -31,8 +29,7 @@ function Introduction() {
           <Name>박지혜</Name>
           <Title>프론트엔드 개발자</Title>
           <Description>
-            "사용자의 삶을 더 편리하게 만드는 기술을 만들기 위해 끊임없이 배우고 성장합니다.
-            작은 디테일이 큰 차이를 만든다고 믿으며, 더 나은 솔루션을 찾기 위해 언제나 고민합니다."
+            "새로운 언어와 기술을 빠르게 익혀 프로젝트에 적용하는 능력이 있습니다. 회의에서는 창의적이면서도 실용적인 아이디어를 제안해, 팀이 더 나은 방향으로 나아가는 데 기여합니다. 다양한 접근법을 고민하며 문제 해결 과정에서 적극적으로 참여합니다."
           </Description>
 
           <IconsContainer>

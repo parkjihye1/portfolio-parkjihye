@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import ReactPlayer from 'react-player'; 
-
+import a1 from '../Images/2.png';
 
 const LimitProduct = () => {
 
@@ -18,7 +17,9 @@ const LimitProduct = () => {
         </SectionStory>
       </TextContainer>
 
-    
+      <ImageContainer>
+        <CityImage src={a1} alt="투두 이미지" />
+      </ImageContainer>
 
       <ContentHeadBox>
         <ContentBox>
@@ -123,5 +124,16 @@ const SectionStory = styled.h2`
 const SectionSubTitle = styled.div`
   margin-top: 25px;
 `;
+
+const ImageContainer = styled.div`
+  width: 80%;
+  margin-bottom: 40px;
+`;
+
+const CityImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
+
 
 export default LimitProduct;

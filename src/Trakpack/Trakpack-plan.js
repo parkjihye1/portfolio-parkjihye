@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player'; 
+import Plan from '../Images/trakpack-plan.png';
 
 const TrakpackPlan = () => {
 
@@ -18,6 +19,9 @@ const TrakpackPlan = () => {
         </SectionStory>
       </TextContainer>
 
+      <ImageContainer>
+        <CityImage src={Plan} alt="여행 일정 선택 이미지" />
+      </ImageContainer>
 
 <ContentHeadBox>
       <ContentBox>
@@ -63,6 +67,15 @@ const TrakpackPlan = () => {
   );
 };
 
+const ImageContainer = styled.div`
+  width: 80%;
+  margin-bottom: 40px;
+`;
+
+const CityImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
 
 const ContentBox = styled.div`
 

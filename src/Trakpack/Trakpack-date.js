@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
-
+import Date from '../Images/trakpack-date.png';
 
 const TrakpackDate = () => {
 
@@ -19,6 +19,9 @@ const TrakpackDate = () => {
         </SectionStory>
       </TextContainer>
      
+      <ImageContainer>
+        <CityImage src={Date} alt="날짜 선택 이미지" />
+      </ImageContainer>
 
 <ContentHeadBox>
       <ContentBox>
@@ -59,6 +62,15 @@ const TrakpackDate = () => {
   );
 };
 
+const ImageContainer = styled.div`
+  width: 80%;
+  margin-bottom: 40px;
+`;
+
+const CityImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
 
 const ContentBox = styled.div`
 

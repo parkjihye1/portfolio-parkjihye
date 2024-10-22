@@ -23,6 +23,11 @@ import TrakpackDate from './Trakpack/Trakpack-date';
 import TrakpackPlan from './Trakpack/Trakpack-plan';
 import TrakpackProblem from './Trakpack/Trakpack-problem-solving';
 
+import Project3 from './PlaniT/project-PlaniT';
+import PlaniT from './PlaniT/PlaniT';
+import PlaniTMain from './PlaniT/PlaniT-main';
+import PlanitProblem from './PlaniT/PlaniT-problem-solving';
+
 
 function App() {
   return (
@@ -49,6 +54,11 @@ function App() {
         <Route path="/trakpack-date" element={<TrakpackDate />} />
         <Route path="/trakpack-plan" element={<TrakpackPlan />} />
         <Route path="/trakpack-problem-solving" element={<TrakpackProblem />} />
+
+        <Route path="/project-3" element={<Project3 />} />
+        <Route path="/planit" element={<PlaniT />} />
+        <Route path="/planit-main" element={<PlaniTMain />} />
+        <Route path="/planit-problem-solving" element={<PlanitProblem />} />
 
       </Routes>
     </Router>

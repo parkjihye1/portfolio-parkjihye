@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import ReactPlayer from 'react-player'; 
+import City from '../Images/trakpack-city.png';
 
 
 const TrakpackCity = () => {
@@ -18,8 +18,10 @@ const TrakpackCity = () => {
         이 페이지는 여행 계획의 첫 단계로, 사용자가 방문할 도시를 직관적이고 쉽게 선택할 수 있도록 도와줍니다.
         </SectionStory>
       </TextContainer>
-     
-    
+
+      <ImageContainer>
+        <CityImage src={City} alt="도시 선택 이미지" />
+      </ImageContainer>
 
 <ContentHeadBox>
       <ContentBox>
@@ -55,6 +57,16 @@ const TrakpackCity = () => {
   );
 };
 
+
+const ImageContainer = styled.div`
+  width: 80%;
+  margin-bottom: 40px;
+`;
+
+const CityImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
 
 const ContentBox = styled.div`
 

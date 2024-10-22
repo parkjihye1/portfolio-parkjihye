@@ -7,7 +7,9 @@ import LimitLogo from '../Images/limit-logo.svg';
 import TrakpackLogo from '../Images/trakpack-logo.svg';
 import PlanitLogo from '../Images/planit-logo.svg';
 
-import ProjectImage3 from '../Images/profile.png';
+import a1 from '../Images/2.png';
+import a2 from '../Images/trakpack-plan.png';
+import a3 from '../Images/planit-main.png';
 
 
 function Projects() {
@@ -20,6 +22,10 @@ function Projects() {
 
     if (projectTitle === 'TRAKPACK') {
         navigate('/project-2');     
+      }
+
+    if (projectTitle === 'PlaniT') {
+        navigate('/project-3');     
       }
   };   
 
@@ -35,7 +41,7 @@ function Projects() {
           github: 'https://github.com/TEAM-SPACE-1/limit-client',
           site: 'https://limit-front.vercel.app/',
           
-          image: null,
+          image: a1,
           skill: ['React', 'JavaScript', 'Styled-components', 'Axios', 'React Router', 'Chart.js', 'Git/GitHub', 'Responsive Web Design'], 
           logo: LimitLogo     
         }, {
@@ -45,18 +51,17 @@ function Projects() {
           github: 'https://github.com/parkjihye1/2024-ts-project',
           site: 'https://parkjihye1.github.io/2024-ts-project',
           
-          image: null,
+          image: a2,
           skill: ['React', 'TypeScript', 'Google Cloud Platform', 'Styled-components', 'React Router', 'Git/GitHub'], // 배열로 수정
           logo: TrakpackLogo
         },
         {
-          title: '프로젝트 3',
+          title: 'PlaniT',
           header: '[개인프로젝트] Front-end, Back-end',
           description: '[PlaniT] Supabase를 활용한 간단한 투두 리스트 플랫폼',
           github: 'https://github.com/parkjihye1/todo-list',
-          site: 'https://todo-list-parkjihye.vercel.app/',
-          video: null,
-          image: ProjectImage3,
+          site: 'https://todo-list-navy-zeta.vercel.app/',
+          image: a3,
           skill: ['React', 'Next.js', 'TypeScript', 'Material-UI', 'Tailwind CSS', 'Supabase', 'Vercel', 'Git/Github'], 
           logo: PlanitLogo
         }].map((project, index) => (
@@ -113,7 +118,6 @@ const ProjectMainTitle = styled.h3`
   font-size: 1.8rem;
   margin-bottom: 10px;
   text-align: center;
-  padding-top: 120px;
 
   @media (max-width: 720px) {
     font-size: 1.5rem;

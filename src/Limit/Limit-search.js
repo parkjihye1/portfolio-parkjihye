@@ -1,17 +1,24 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import ReactPlayer from 'react-player';
-
+import a1 from '../Images/3.png';
+import a2 from '../Images/3-1.png';
 
 const LimitSearch = () => {
+  const images = [a1, a2];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000); 
+
+    return () => clearInterval(interval); // 컴포넌트가 언마운트될 때 인터벌 해제
+  }, [images.length]);
 
   return (
     <Container>
-
       <TextContainer>
         <SectionHeadTitle>검색 페이지</SectionHeadTitle>
         <SectionStory>
@@ -19,7 +26,9 @@ const LimitSearch = () => {
         </SectionStory>
       </TextContainer>
 
-     
+      <ImageContainer>
+        <CityImage src={images[currentImageIndex]} alt={`배너 이미지 ${currentImageIndex + 1}`} />
+      </ImageContainer>    
 
       <ContentHeadBox>
         <ContentBox>
@@ -134,6 +143,18 @@ const SectionStory = styled.h2`
 const SectionSubTitle = styled.div`
   margin-top: 25px;
 `;
+
+const ImageContainer = styled.div`
+  width: 80%;
+  margin-bottom: 40px;
+`;
+
+const CityImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
+
+
 
 export default LimitSearch;
 

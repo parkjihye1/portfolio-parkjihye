@@ -1,24 +1,36 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import ReactPlayer from 'react-player'; // 비디오 플레이어를 위해 사용
+import a1 from '../Images/1.png';
+import a2 from '../Images/1-1.png';
+import a3 from '../Images/1-2.png';
 
 const LimitMain = () => {
+  const images = [a1, a2, a3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000); 
+
+    return () => clearInterval(interval); // 컴포넌트가 언마운트될 때 인터벌 해제
+  }, [images.length]);
 
   return (
     <Container>
-
       <TextContainer>
         <SectionHeadTitle>메인 페이지</SectionHeadTitle>
         <SectionStory>
-        이 페이지는 사이트에 접속하자마자 사용자에게 가장 먼저 보여지는 메인 화면입니다.
+          이 페이지는 사이트에 접속하자마자 사용자에게 가장 먼저 보여지는 메인 화면입니다.
         </SectionStory>
       </TextContainer>
-     
-     
+
+      <ImageContainer>
+        <CityImage src={images[currentImageIndex]} alt={`배너 이미지 ${currentImageIndex + 1}`} />
+      </ImageContainer>
+
 <ContentHeadBox>
       <ContentBox>
         <SectionTitle>배너 컴포넌트</SectionTitle>
@@ -142,5 +154,17 @@ const SectionSubTitle = styled.div`
   margin-top: 25px;
   
 `;
+
+const ImageContainer = styled.div`
+  width: 80%;
+  margin-bottom: 40px;
+`;
+
+const CityImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
+
+
 
 export default LimitMain;
